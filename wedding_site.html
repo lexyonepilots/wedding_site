@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Приглашение на таинство венчания</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="theme-color" content="#faf9f5" />
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --accent: #6b8e23; /* оливковый */
+      --accent-light: #8fae44;
+    }
+    body { background: var(--bg); color: #2c2c2c; }
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .neon-text { color: var(--accent); }
+    .ring-soft { box-shadow: 0 0 0 2px rgba(107,142,35,0.15); }
+    .smooth { transition: all .25s ease; }
+    button {
+      background-color: var(--accent);
+    }
+    button:hover {
+      background-color: var(--accent-light);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <!-- Hero -->
+  <header class="relative z-10">
+    <div class="max-w-4xl mx-auto px-6 pt-14 pb-10">
+      <div class="glass rounded-3xl p-8 md:p-12 text-center">
+        <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-neutral-600">Таинство венчания</p>
+        <h1 class="text-3xl md:text-5xl font-bold mt-3 neon-text">Алексей & Олеся</h1>
+        <p class="mt-4 text-neutral-700">Дата: <span class="font-medium">31 октября 2025</span> • Время: <span class="font-medium">12:00</span></p>
+        <p class="text-neutral-700">
+          Место:
+          <a href="https://yandex.ru/maps/-/CLaTAS1U" target="_blank" rel="noopener noreferrer" class="underline text-[var(--accent)] hover:text-[var(--accent-light)] font-medium">
+            Храм Рождества Иоанна Предтечи на Пресне
+          </a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Обращение -->
+  <section class="relative z-10">
+    <div class="max-w-3xl mx-auto px-6 pb-10">
+      <div class="glass rounded-3xl p-6 md:p-10">
+        <p class="text-lg leading-relaxed text-neutral-800">
+          Дорогие родители, родственники и друзья.  
+          Мы приглашаем Вас разделить с нами радость таинства венчания и надеемся, что вам удастся посетить прекрасный город Москву и стать соучастником начала нашей совместной жизни.  
+          В этот день мы хотим, чтобы рядом были самые родные люди.  
+          По окончании таинства приглашаем вас к столу — чтобы появилась возможность соединить наши дорогие семьи Москвы, Иркутска и Ставрополя.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Галерея -->
+  <section class="relative z-10">
+    <div class="max-w-6xl mx-auto px-6 pb-6">
+      <div class="grid md:grid-cols-2 gap-4 justify-center">
+        <figure class="glass rounded-2xl overflow-hidden ring-soft">
+          <img src="wdd.jpeg" alt="Алексей и Олеся 1" class="w-full h-96 object-cover smooth hover:scale-[1.01]" />
+        </figure>
+        <figure class="glass rounded-2xl overflow-hidden ring-soft">
+          <img src="wdd_1.jpeg" alt="Алексей и Олеся 2" class="w-full h-96 object-cover smooth hover:scale-[1.01]" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP форма -->
+  <section class="relative z-10">
+    <div class="max-w-3xl mx-auto px-6 pb-20">
+      <div class="glass rounded-3xl p-6 md:p-10">
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-[var(--accent)]">Подтвердите присутствие</h2>
+        <form id="rsvp-form" class="space-y-5" action="https://formsubmit.co/akozhukhovsky@icloud.com" method="POST">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-neutral-700">Имя</span>
+              <input required name="first_name" type="text" placeholder="Иван" class="mt-1 w-full rounded-xl border border-neutral-300 focus:border-[var(--accent)] outline-none p-3" />
+            </label>
+            <label class="block">
+              <span class="text-sm text-neutral-700">Фамилия</span>
+              <input required name="last_name" type="text" placeholder="Иванов" class="mt-1 w-full rounded-xl border border-neutral-300 focus:border-[var(--accent)] outline-none p-3" />
+            </label>
+          </div>
+          <fieldset class="grid md:grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 glass rounded-xl p-3 cursor-pointer smooth hover:scale-[1.01]">
+              <input type="radio" name="attending" value="yes" required class="accent-[var(--accent)]" />
+              <span>Приеду на венчание</span>
+            </label>
+            <label class="flex items-center gap-3 glass rounded-xl p-3 cursor-pointer smooth hover:scale-[1.01]">
+              <input type="radio" name="attending" value="no" required class="accent-[var(--accent)]" />
+              <span>Не смогу приехать</span>
+            </label>
+          </fieldset>
+          <label class="block">
+            <span class="text-sm text-neutral-700">Комментарий (необязательно)</span>
+            <textarea name="note" rows="3" placeholder="Сообщение для нас" class="mt-1 w-full rounded-xl border border-neutral-300 focus:border-[var(--accent)] outline-none p-3"></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="RSVP на венчание" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl text-white font-semibold smooth">
+            Отправить ответ
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="relative z-10 pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center text-neutral-500 text-sm">
+        <p>С любовью • Алексей & Олеся • 2025</p>
+        <p class="mt-1">New Kozhukhovsky Family Production</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
