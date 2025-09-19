@@ -23,13 +23,13 @@
     .ring-soft { box-shadow: 0 0 0 2px rgba(107,142,35,0.15); }
     .smooth { transition: all .25s ease; }
 
-    /* Единый стиль для кнопки */
-    button {
+    /* Стили кнопки */
+    .btn-accent {
       background-color: var(--accent);
       color: #fff; /* белый текст */
       transition: background-color 0.25s ease;
     }
-    button:hover {
+    .btn-accent:hover {
       background-color: var(--accent-light);
     }
   </style>
@@ -113,7 +113,7 @@
           <input type="hidden" name="_subject" value="RSVP на венчание" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
-          <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-semibold smooth">
+          <button type="submit" class="btn-accent w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-semibold smooth">
             Отправить ответ
           </button>
         </form>
