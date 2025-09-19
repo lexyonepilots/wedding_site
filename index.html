@@ -6,33 +6,33 @@
   <title>Приглашение на таинство венчания</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="theme-color" content="#faf9f5" />
-<style>
-  :root {
-    --bg: #faf9f5;
-    --accent: #6b8e23; /* оливковый */
-    --accent-light: #8fae44;
-  }
-  body { background: var(--bg); color: #2c2c2c; }
-  .glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  }
-  .neon-text { color: var(--accent); }
-  .ring-soft { box-shadow: 0 0 0 2px rgba(107,142,35,0.15); }
-  .smooth { transition: all .25s ease; }
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --accent: #6b8e23; /* оливковый */
+      --accent-light: #8fae44;
+    }
+    body { background: var(--bg); color: #2c2c2c; }
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .neon-text { color: var(--accent); }
+    .ring-soft { box-shadow: 0 0 0 2px rgba(107,142,35,0.15); }
+    .smooth { transition: all .25s ease; }
 
-  /* Единый стиль для кнопки */
-  button {
-    background-color: var(--accent);
-    color: #fff; /* белый текст */
-    transition: background-color 0.25s ease;
-  }
-  button:hover {
-    background-color: var(--accent-light);
-  }
-</style>
+    /* Единый стиль для кнопки */
+    button {
+      background-color: var(--accent);
+      color: #fff; /* белый текст */
+      transition: background-color 0.25s ease;
+    }
+    button:hover {
+      background-color: var(--accent-light);
+    }
+  </style>
 </head>
 <body class="min-h-screen antialiased">
   <!-- Hero -->
@@ -113,7 +113,7 @@
           <input type="hidden" name="_subject" value="RSVP на венчание" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
-          <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl text-white font-semibold smooth">
+          <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-semibold smooth">
             Отправить ответ
           </button>
         </form>
